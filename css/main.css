@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: product-sans;
+    src: url(fonts/ProductSansRegular.ttf);
+    font-weight: regular;
+}
+@font-face {
+    font-family: product-sans;
+    src: url(fonts/ProductSansBold.ttf);
+    font-weight: bold;
+}
+body {
+  margin: 0px;
+  font-family: product-sans;
+}
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.top-bar {
+    background: #0048A8;
+}
+.top-bar .wrap {
+    height: 10px;
+    background: url(../img/top-bar.png);
+}
+
+
+.nav {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  padding-top: 5px;
+}
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 14px 10px 10px 10px;
+  padding-left: 0;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #4F4F4F;
+  font-size: 18px;
+}
+.nav > .nav-links > a.link-last {
+    padding-right: 0;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+@media (max-width:1170px) {
+    .nav {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+@media (max-width:670px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    /* width: 50px; */
+    height: 50px;
+    padding: 13px;
+    padding-top: 21px;
+    padding-right:  0;
+    margin-right: 25px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 8px;
+    border-top: 2px solid #64696c;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
+.hero {
+    background: linear-gradient(150.6deg, #114AF4 17.13%, #112094 97.08%);
+    padding: 50px 30px;
+    text-align: center;
+}
+.hero h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 100%;
+}
+.hero h3 {
+    color: #E0E0E0;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@media (max-width:670px) {
+   .hero h1 {
+    font-size: 24px;
+    line-height: 125%;
+} 
+}
+
+
+.examples {
+    text-align: center;
+}
+.examples h2 {
+    margin-top: 70px;
+    font-weight: normal;
+    color: #112AAB;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  max-width:1170px;
+  margin:0 auto;
+  text-align: center;
+}
+.card {
+  width:48.5%;
+  background-color:#fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0px 8px 14px rgba(216, 221, 230, 0.5);
+}.card a{
+    text-decoration: none;
+}
+.info {
+  padding: 10px;
+  background: #eaeaea;
+  background: #fff;
+  margin-top: -4px;
+  text-align:  left;
+  padding-top: 20px;
+}
+.info h4 {
+    font-size: 24px;
+    color: #4F4F4F;
+    font-weight:  normal;
+    margin-bottom:  0;
+    margin-top:  0;
+}
+
+@media screen and (max-width:800px ){
+  .card {
+    width:100%;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width:470px ){
+  .card-wrapper {
+    justify-content: center;
+  }
+  .card {
+    width:98%;
+    margin-bottom: 10px;
+  }
+    .info h4 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+footer {
+    height: 60px;
+    background: #724182;
+    text-align: center;
+    color: #CCCCCC;
+    padding-top: 4px;
+}
+footer a {
+    color: #fff;
+}
